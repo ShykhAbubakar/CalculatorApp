@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:calculatorapp/components/my_button.dart';
 import 'package:calculatorapp/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:math_expressions/math_expressions.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -166,10 +169,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   });
                 }),
                 MyButton(title: 'DEL',onPress: (){
-
+                  userInput = userInput.substring(0, userInput.length-1);
+                  setState(() {
+                  });
                 }),
                 MyButton(title: '=', color: Colors.orangeAccent,onPress: (){
+                  equalPress();
+                  setState(() {
 
+                  });
                 }),
 
               ],
@@ -178,6 +186,15 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+  void equalPress(){
+    String finalUserInput =  userInput.replaceAll('x', '*');
+    Parser p = Parser();
+    Expression expression = p.parse(finalUserInput);
+    ContextModel contextModel = ContextModel();
+    
+   double eval = expression.evaluate(EvaluationType.REAL, contextModel);
+   answer = eval.toString();
   }
 }
 
