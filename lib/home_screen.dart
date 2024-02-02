@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     });
                   }),
-                  MyButton(title: '/', color: Colors.orangeAccent,onPress: (){
+                  MyButton(title: '/', color: Colors.pinkAccent,onPress: (){
                     userInput += '/';
                     setState(() {
 
@@ -89,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     });
                   }),
-                  MyButton(title: 'x', color: Colors.orangeAccent,onPress: (){
+                  MyButton(title: 'x', color: Colors.pinkAccent,onPress: (){
                     userInput += 'x';
                     setState(() {
 
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     });
                   }),
-                  MyButton(title: '-', color: Colors.orangeAccent,onPress: (){
+                  MyButton(title: '-', color: Colors.pinkAccent,onPress: (){
                     userInput += '-';
                     setState(() {
 
@@ -147,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     });
                   }),
-                  MyButton(title: '+', color: Colors.orangeAccent,onPress: (){
+                  MyButton(title: '+', color: Colors.pinkAccent,onPress: (){
                     userInput += '+';
                     setState(() {
 
@@ -175,7 +175,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     setState(() {
                     });
                   }),
-                  MyButton(title: '=', color: Colors.orangeAccent,onPress: (){
+                  MyButton(title: '=', color: Colors.pinkAccent,onPress: (){
                     equalPress();
                     setState(() {
 
